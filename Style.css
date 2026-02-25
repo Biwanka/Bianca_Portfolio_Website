@@ -73,7 +73,7 @@ body {
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -481,26 +481,48 @@ header {
 
 /* Filter bar  */
 .filter-bar {
-    margin-bottom: 2em;
+    margin: 1.5em auto 2.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: .5em;
+    gap: .6em;
+    padding: .8em 1em;
+    max-width: 980px;
+    background: rgba(15, 76, 92, 0.15);
+    border: 1px solid rgba(222, 192, 158, 0.35);
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .filter-btn {
-    padding: .5em 1em;
-    background: var(--clr-light2);
-    border: none;
-    color: var(--clr-dark2);
+    padding: .55em 1.15em;
+    background: transparent;
+    border: 1px solid rgba(222, 192, 158, 0.6);
+    color: var(--clr-light);
     cursor: pointer;
-    font-weight: bold;
+    font-weight: var(--fw-bold);
+    border-radius: 999px;
+    letter-spacing: 1px;
+    transition:
+        transform 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        box-shadow 180ms ease;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: var(--clr-accent3);
+    color: var(--clr-dark2);
+    border-color: var(--clr-accent3);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.filter-btn:focus-visible {
+    outline: 3px solid var(--clr-light2);
+    outline-offset: 2px;
 }
 
 /* individual work portfolio */
@@ -521,6 +543,10 @@ header {
         transform .25s ease;
     background: var(--clr-light);
     overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid rgba(222, 192, 158, 0.3);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    animation: workReveal 600ms ease both;
 }
 
 
@@ -547,6 +573,17 @@ header {
 
 .portfolio__items.is-moving {
     transition: none;
+}
+
+@keyframes workReveal {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .portfolio__item-individual p {
@@ -581,11 +618,11 @@ header {
 
 
 .footer {
-    background: #111;
-    color: var(--clr-accent);
+    background: linear-gradient(180deg, rgba(15, 76, 92, 0.95), rgba(41, 5, 27, 0.98));
+    color: var(--clr-accent3);
     text-align: center;
-    padding: 0;
-    font-size: var(--fs-h3)
+    padding: 2.5em 1.5em 3em;
+    font-size: var(--fs-h3);
 }
 
 
@@ -597,6 +634,7 @@ header {
 
 .footer__link {
     font-weight: var(--fw-bold);
+    letter-spacing: 1px;
 }
 
 .footer__link:hover,
@@ -615,7 +653,7 @@ header {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 1.5em 0 0;
     padding: 0;
 }
 
@@ -626,6 +664,7 @@ header {
 
 .social-list__link {
     padding: .5em;
+    font-size: 1.5em;
 
 }
 
