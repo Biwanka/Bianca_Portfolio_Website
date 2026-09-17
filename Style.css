@@ -675,11 +675,11 @@ header {
     margin: 0 auto;
 }
 
-.portfolio__item-individual--medication {
+.portfolio__item-individual--split {
     max-width: 1200px;
 }
 
-.portfolio__item-individual--medication .portfolio__link {
+.portfolio__item-individual--split .portfolio__link {
     display: inline-block;
     margin-bottom: 1.5rem;
     font-weight: var(--fw-bold);
@@ -687,24 +687,24 @@ header {
     text-decoration: none;
 }
 
-.portfolio__item-individual--medication .portfolio__link:hover {
+.portfolio__item-individual--split .portfolio__link:hover {
     text-decoration: underline;
 }
 
-.portfolio__item-individual--medication .portfolio__media-block {
+.portfolio__item-individual--split .portfolio__media-block {
     display: grid;
     grid-template-columns: minmax(260px, 510px) minmax(0, 1fr);
     gap: 2rem;
     align-items: start;
 }
 
-.portfolio__item-individual--medication .portfolio__image-wrap {
+.portfolio__item-individual--split .portfolio__image-wrap {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.portfolio__item-individual--medication .portfolio__image-wrap img {
+.portfolio__item-individual--split .portfolio__image-wrap img {
     display: block;
     width: 100%;
     max-width: 510px;
@@ -713,7 +713,7 @@ header {
     margin: 0;
 }
 
-.portfolio__item-individual--medication .portfolio__caption {
+.portfolio__item-individual--split .portfolio__caption {
     margin: 0.85rem 0 0;
     max-width: none;
     text-align: left;
@@ -721,30 +721,30 @@ header {
     color: var(--clr-dark);
 }
 
-.portfolio__item-individual--medication .portfolio__text {
+.portfolio__item-individual--split .portfolio__text {
     min-width: 0;
 }
 
-.portfolio__item-individual--medication .portfolio__text p {
+.portfolio__item-individual--split .portfolio__text p {
     max-width: none;
     margin: 0 0 1rem;
     text-align: left;
 }
 
-.portfolio__item-individual--medication .portfolio__lead {
+.portfolio__item-individual--split .portfolio__lead {
     margin: 0 0 0.75rem;
     font-weight: var(--fw-bold);
 }
 
 @media (max-width: 700px) {
-    .portfolio__item-individual--medication .portfolio__media-block {
+    .portfolio__item-individual--split .portfolio__media-block {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    .portfolio__item-individual--medication .portfolio__image-wrap,
-    .portfolio__item-individual--medication .portfolio__caption,
-    .portfolio__item-individual--medication .portfolio__text p {
+    .portfolio__item-individual--split .portfolio__image-wrap,
+    .portfolio__item-individual--split .portfolio__caption,
+    .portfolio__item-individual--split .portfolio__text p {
         text-align: left;
     }
 }
